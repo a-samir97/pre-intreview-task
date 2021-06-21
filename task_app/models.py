@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Tile(models.Model):
     STATUS = (
         ("L", "Live"),
@@ -9,6 +10,10 @@ class Tile(models.Model):
 
     launch_date = models.DateTimeField()
     status = models.CharField(max_length=1, choices=STATUS)
+
+    def __str__(self):
+        return self.status
+
 
 class Task(models.Model):
     TYPES = (
@@ -22,3 +27,6 @@ class Task(models.Model):
     description = models.TextField()
     type = models.CharField(max_length=2, choices=TYPES)
     tile = models.ForeignKey(Tile, on_delete=models.CASCADE, related_name='tasks')
+
+    def __str__(self):
+        return self.title

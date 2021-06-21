@@ -1,16 +1,16 @@
 """
-WSGI config for pre_interview_task project.
+WSGI config for incling_task project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
 For more information on this file, see
-https://docs.djangoproject.com/en/2.2/howto/deployment/wsgi/
+https://docs.djangoproject.com/en/2.0/howto/deployment/wsgi/
 """
 
 import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pre_interview_task.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "incling_task.settings")
 
 application = get_wsgi_application()

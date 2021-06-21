@@ -1,11 +1,13 @@
-from rest_framework import viewsets
+from rest_framework.viewsets import ModelViewSet
 from .models import Task, Tile
 from .serializers import TaskSerializer, TileSerializer
 
-class TaskViewSet(viewsets.ModelViewSet):
+
+class TaskModelViewSet(ModelViewSet):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
 
-class TileViewSet(viewsets.ModelViewSet):
+
+class TileModelViewSet(ModelViewSet):
     queryset = Tile.objects.all()
     serializer_class = TileSerializer
